@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layout should be rendered 1`] = `
+<div>
+  <header />
+  <div />
+  <footer />
+</div>
+`;

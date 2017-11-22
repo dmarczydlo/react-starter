@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1511382505456" clover="3.2.0">
+  <project timestamp="1511382505456" name="All files">
+    <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5" elements="18" coveredelements="18" complexity="0" loc="13" ncloc="13" packages="3" files="6" classes="6">
+      <package name="src.layout">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="footer.jsx" path="D:\projects\react-webpack-starter\src\layout\footer.jsx">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+        <file name="header.jsx" path="D:\projects\react-webpack-starter\src\layout\header.jsx">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+        <file name="index.jsx" path="D:\projects\react-webpack-starter\src\layout\index.jsx">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="7" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.sites">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="app.jsx" path="D:\projects\react-webpack-starter\src\sites\app.jsx">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+        </file>
+        <file name="home.jsx" path="D:\projects\react-webpack-starter\src\sites\home.jsx">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="test">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="jestsetup.jsx" path="D:\projects\react-webpack-starter\test\jestsetup.jsx">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="7" count="5" type="stmt"/>
+          <line num="8" count="5" type="stmt"/>
+          <line num="9" count="5" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
