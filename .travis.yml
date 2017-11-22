@@ -7,3 +7,4 @@ node_js:
   - '7'
 
 cache: yarn
+after_script: "cat ./coverage/lcov.info | coveralls"

@@ -5,9 +5,7 @@ describe('Footer', () => {
     let wrapper;
 
     it('should be rendered', () => {
-        wrapper = shallow(
-            <Footer/>
-        );
+        wrapper = global.shallow(<Footer />);
         expect(wrapper).toMatchSnapshot();
     });
 });

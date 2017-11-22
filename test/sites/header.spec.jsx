@@ -5,9 +5,7 @@ describe('Header', () => {
     let wrapper;
 
     it('should be rendered', () => {
-        wrapper = shallow(
-            <Header/>
-        );
+        wrapper = global.shallow(<Header />);
         expect(wrapper).toMatchSnapshot();
     });
 });
