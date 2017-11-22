@@ -15,6 +15,6 @@
 *  Webpack
 
 ## Getting started
-```git clone git@github.com:dmarczydlo/react-starter.git```
-```yarn install```
-```yarn dev```
+1. ```git clone git@github.com:dmarczydlo/react-starter.git```
+1. ```yarn install```
+1. ```yarn dev```
