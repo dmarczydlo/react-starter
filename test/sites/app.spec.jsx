@@ -5,9 +5,7 @@ describe('app site', () => {
     let wrapper;
 
     it('should be rendered', () => {
-        wrapper = shallow(
-            <App/>
-        );
+        wrapper = global.shallow(<App />);
         expect(wrapper).toMatchSnapshot();
     });
 });
