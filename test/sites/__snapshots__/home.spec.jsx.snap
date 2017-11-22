@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home site should be rendered 1`] = `
+<div>
+  Home
+</div>
+`;
