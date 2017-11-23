@@ -23,6 +23,9 @@
   },
   "plugins": [
     [
+      "transform-runtime",
+      "transform-async-generator-functions",
+      "transform-function-bind",
       "typecheck",
       {
         "disable": {
