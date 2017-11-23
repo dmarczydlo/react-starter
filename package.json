@@ -7,16 +7,12 @@
     "node": "8"
   },
   "scripts": {
-    "watch": "./node_modules/.bin/webpack -d --watch",
     "dev": "./node_modules/.bin/webpack-dev-server -d --hot --inline --progress --colors",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack -p",
-    "test": "yarn jest && yarn lint",
-    "test:watch": "yarn jest:watch & yarn lint:watch",
+    "test": "yarn lint && yarn jest",
     "jest": "./node_modules/.bin/jest --coverage --verbose",
-    "jest:watch": "./node_modules/.bin/jest --watch",
-    "lint": "./node_modules/.bin/eslint src/js test --ext .js --ext .jsx",
-    "lint:watch": "./node_modules/.bin/esw src/js test --ext .js --ext .jsx -w --color --clear",
-    "lint:fix": "./node_modules/.bin/eslint src/js test --ext .js --ext .jsx --fix"
+    "lint": "./node_modules/.bin/eslint src/js src --ext .js --ext .jsx && ./node_modules/.bin/eslint src/js test --ext .js --ext .jsx",
+    "lint:fix": "./node_modules/.bin/eslint src/js src --ext .js --ext .jsx --fix  && /node_modules/.bin/eslint src/js test --ext .js --ext .jsx --fix"
   },
   "author": "Daniel Marczydlo <daniel.marczydlo@gmail.com>",
   "license": "MIT",
