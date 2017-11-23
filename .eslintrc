@@ -13,7 +13,10 @@
   "rules": {
     "indent": [
       2,
-      4
+      4,
+      {
+        "SwitchCase": 1
+      }
     ],
     "max-len": [
       0
@@ -48,6 +51,10 @@
     ],
     "arrow-body-style": [
       0
+    ],
+    "object-curly-spacing": [
+      "error",
+      "never"
     ]
   }
 }
