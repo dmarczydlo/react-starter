@@ -1,8 +1,9 @@
 import React from 'react';
+import '../style/index.scss';
 
 const Home = () => {
     return (
-        <div>
+        <div className="test">
             Home
         </div>
 

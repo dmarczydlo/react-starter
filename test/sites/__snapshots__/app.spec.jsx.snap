@@ -2,14 +2,6 @@
 
 exports[`app site should be rendered 1`] = `
 <div>
-  <BrowserRouter>
-    <index>
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/"
-      />
-    </index>
-  </BrowserRouter>
+  <RouterElements />
 </div>
 `;
