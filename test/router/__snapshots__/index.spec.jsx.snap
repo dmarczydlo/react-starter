@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Router index should be rendered 1`] = `
+<BrowserRouter>
+  <index>
+    <Switch>
+      <RouteWithSubRoutes
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <RouteWithSubRoutes
+        component={[Function]}
+        path="/child/:id"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </index>
+</BrowserRouter>
+`;
