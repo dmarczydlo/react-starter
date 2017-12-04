@@ -1,0 +1,25 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'http-server', '-g' ]
+2 info using npm@3.5.2
+3 info using node@v8.9.1
+4 verbose stack Error: Cannot find module 'ansi'
+4 verbose stack     at Function.Module._resolveFilename (module.js:536:15)
+4 verbose stack     at Function.Module._load (module.js:466:25)
+4 verbose stack     at Module.require (module.js:579:17)
+4 verbose stack     at require (internal/module.js:11:18)
+4 verbose stack     at Object.<anonymous> (/usr/share/npm/lib/ls.js:15:13)
+4 verbose stack     at Module._compile (module.js:635:30)
+4 verbose stack     at Object.Module._extensions..js (module.js:646:10)
+4 verbose stack     at Module.load (module.js:554:32)
+4 verbose stack     at tryModuleLoad (module.js:497:12)
+4 verbose stack     at Function.Module._load (module.js:489:3)
+5 verbose cwd /home/marczak/Workspace/react-starter
+6 error Linux 4.13.0-17-generic
+7 error argv "/usr/bin/node" "/usr/bin/npm" "install" "http-server" "-g"
+8 error node v8.9.1
+9 error npm  v3.5.2
+10 error code MODULE_NOT_FOUND
+11 error Cannot find module 'ansi'
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]

@@ -1,91 +1,65 @@
-const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const copyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackBuildNotifierPlugin = require('webpack-notifier');
-const autoprefixer = require('autoprefixer');
+"use strict";
+var webpack = require('webpack');
+var path = require('path');
+var loaders = require('./webpack.loaders');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var DashboardPlugin = require('webpack-dashboard/plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const BUILD_DIR = path.resolve(__dirname, 'dist');
-const APP_DIR = path.resolve(__dirname, 'src');
+const HOST = process.env.HOST || "127.0.0.1";
+const PORT = process.env.PORT || "8888";
 
-const isProd = (process.env.NODE_ENV === 'production');
+loaders.push({
+  test: /\.scss$/,
+  loaders: ['style-loader', 'css-loader?importLoaders=1', 'sass-loader'],
+  exclude: ['node_modules']
+});
 
-const base = {
-    entry: path.join(APP_DIR, 'index.jsx'),
-    devServer: {
-        compress: true,
-        port: 3000,
-        proxy: {
-            "/api": "http://localhost:3001"
-        }
-    },
-    output: {
-        path: BUILD_DIR,
-        filename: 'bundle.js',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: [
-                    {loader: 'style-loader'},
-                    {loader: 'css-loader'},
-                    {loader: 'postcss-loader'},
-                    {loader: 'sass-loader'},
-                ],
-            },
-            {
-                test: /\.jsx?$/,
-                loader: 'babel-loader',
-                include: APP_DIR,
-            },
-            {
-                test: /\.(jpg|png|svg)$/,
-                loader: 'file-loader',
-            },
-        ],
-    },
-    resolve: {
-        extensions: ['.js', '.jsx'],
-    },
-    plugins: [
-        copyWebpackPlugin([
-            {
-                from: 'public/index.html',
-                to: 'index.html',
-                force: true,
-            },
-        ]),
-        new webpack.LoaderOptionsPlugin({
-            options: {
-                postcss: [
-                    autoprefixer({
-                        browsers: ['last 3 versions', '> 1%'],
-                    }),
-                ],
-            },
-        }),
-        new WebpackBuildNotifierPlugin(),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: isProd ? JSON.stringify('production') : JSON.stringify('development'),
-            },
-        }),
-    ],
+module.exports = {
+  entry: [
+    'react-hot-loader/patch',
+    './src/index.jsx', // your app's entry point
+  ],
+  devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
+  output: {
+    publicPath: '/',
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  module: {
+    loaders
+  },
+  devServer: {
+    contentBase: "./public",
+    // do not print bundle build stats
+    noInfo: true,
+    // enable HMR
+    hot: true,
+    // embed the webpack-dev-server runtime into the bundle
+    inline: true,
+    // serve index.html in place of 404 responses to allow HTML5 history
+    historyApiFallback: true,
+    port: PORT,
+    host: HOST
+  },
+  plugins: [
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin({
+      filename: 'style.css',
+      allChunks: true
+    }),
+    new DashboardPlugin(),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      files: {
+        css: ['style.css'],
+        js: [ "bundle.js"],
+      }
+    }),
+  ]
 };
-
-const dev = {
-    devtool: 'source-map',
-};
-
-const prod = {
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
-            },
-        }),
-    ],
-};
-
-module.exports = isProd ? merge(base, prod) : merge(base, dev);
