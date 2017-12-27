@@ -6,12 +6,12 @@ export const routes = [
     {
         path: '/',
         exact: true,
-        component: Home,
+        component: Home
     },
     {
         path: '/child/:id',
-        component: Home,
-    },
+        component: Home
+    }
 ];
 
 export const RouteWithSubRoutes = (route, key) => (

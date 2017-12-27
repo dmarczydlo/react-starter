@@ -29,5 +29,4 @@ describe('Router index', () => {
         wrapper = global.shallow(<Router>{RouteWithSubRoutes(route)}</Router>);
         expect(wrapper).toMatchSnapshot();
     });
-
 });

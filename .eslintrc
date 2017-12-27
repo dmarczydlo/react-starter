@@ -11,6 +11,10 @@
     "react"
   ],
   "rules": {
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
     "indent": [
       2,
       4,
