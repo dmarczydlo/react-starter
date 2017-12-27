@@ -6,16 +6,17 @@ export const routes = [
     {
         path: '/',
         exact: true,
-        component: Home,
+        component: Home
     },
     {
         path: '/child/:id',
-        component: Home,
-    },
+        component: Home
+    }
 ];
 
-export const RouteWithSubRoutes = route => (
+export const RouteWithSubRoutes = (route, key) => (
     <Route
+        key={key}
         path={route.path}
         exact={route.exact}
         render={props => (

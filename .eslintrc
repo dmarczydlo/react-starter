@@ -11,6 +11,10 @@
     "react"
   ],
   "rules": {
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
     "indent": [
       2,
       4,
@@ -55,6 +59,9 @@
     "object-curly-spacing": [
       "error",
       "never"
+    ],
+    "react/no-array-index-key":[
+      0
     ]
   }
 }
