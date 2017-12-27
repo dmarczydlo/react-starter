@@ -60,7 +60,7 @@
       "error",
       "never"
     ],
-    "react/no-array-index-key" : [
+    "react/no-array-index-key":[
       0
     ]
   }
