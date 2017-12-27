@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.jsx",
   "engines": {
-    "node": "8"
+    "node": ">=7.6.0"
   },
   "scripts": {
     "dev": " webpack-dashboard -- webpack-dev-server",
