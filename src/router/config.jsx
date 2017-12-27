@@ -14,8 +14,9 @@ export const routes = [
     },
 ];
 
-export const RouteWithSubRoutes = route => (
+export const RouteWithSubRoutes = (route, key) => (
     <Route
+        key={key}
         path={route.path}
         exact={route.exact}
         render={props => (

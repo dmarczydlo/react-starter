@@ -9,8 +9,8 @@ const RouterElements = () => {
         <Router>
             <Layout>
                 <Switch>
-                    {routes.map(route => (
-                        <RouteWithSubRoutes {...route} />
+                    {routes.map((route, key) => (
+                        <RouteWithSubRoutes {...route} key={key} />
                     ))}
 
                     <Route component={NotFound} />

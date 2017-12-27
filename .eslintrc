@@ -55,6 +55,9 @@
     "object-curly-spacing": [
       "error",
       "never"
+    ],
+    "react/no-array-index-key":[
+      0
     ]
   }
 }

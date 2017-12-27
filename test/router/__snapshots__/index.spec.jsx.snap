@@ -1,5 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Router index Config should be rendered 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "blank",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Route
+    exact={true}
+    path="/"
+    render={[Function]}
+  />
+</Router>
+`;
+
+exports[`Router index Config should be rendered without layout 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "blank",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Route
+    path="/test/"
+    render={[Function]}
+  />
+</Router>
+`;
+
 exports[`Router index should be rendered 1`] = `
 <BrowserRouter>
   <index>
@@ -7,10 +68,12 @@ exports[`Router index should be rendered 1`] = `
       <RouteWithSubRoutes
         component={[Function]}
         exact={true}
+        key="0"
         path="/"
       />
       <RouteWithSubRoutes
         component={[Function]}
+        key="1"
         path="/child/:id"
       />
       <Route
