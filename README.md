@@ -1,5 +1,7 @@
 
 # React Starter 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/dmarczydlo/react-starter.svg)](https://greenkeeper.io/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dmarczydlo/react-starter/issues)  
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)](https://github.com/dmarczydlo/react-starter/blob/master/LICENSE)  [![GitHub issues](https://img.shields.io/github/issues/dmarczydlo/react-starter.svg)](https://github.com/dmarczydlo/react-starter/issues)
 [![dependencies Status](https://david-dm.org/dmarczydlo/react-starter/status.svg)](https://david-dm.org/dmarczydlo/react-starter)
