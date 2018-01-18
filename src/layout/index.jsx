@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import Header from './header';
 import Footer from './footer';
 
@@ -7,9 +7,9 @@ export default class index extends Component {
         return (
             <div>
                 <Header />
-                <div>
+                <Fragment>
                     {this.props.children}
-                </div>
+                </Fragment>
                 <Footer />
             </div>
         );
