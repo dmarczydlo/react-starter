@@ -4,6 +4,17 @@ exports[`home site should be rendered 1`] = `
 <div
   className="test"
 >
-  Home
+  <Link
+    replace={false}
+    to="/child/1"
+  >
+    child 1
+  </Link>
+  <Link
+    replace={false}
+    to="/child/2"
+  >
+    child 2
+  </Link>
 </div>
 `;
