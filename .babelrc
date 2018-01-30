@@ -16,16 +16,20 @@
   ],
   "env": {
     "development": {
-      "presets": [
-        "react-hmre"
-      ]
+      "plugins": [[ "transform-runtime",
+        "transform-async-generator-functions",
+        "transform-function-bind",
+        "react-transform", {
+        "transforms": [{
+          "transform": "react-transform-hmr",
+          "imports": ["react"],
+          "locals": ["module"]
+        }]
+      }]]
     }
   },
   "plugins": [
     [
-      "transform-runtime",
-      "transform-async-generator-functions",
-      "transform-function-bind",
       "typecheck",
       {
         "disable": {
