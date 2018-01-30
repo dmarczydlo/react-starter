@@ -23,3 +23,12 @@
 1. ```git clone git@github.com:dmarczydlo/react-starter.git```
 1. ```yarn install```
 1. ```yarn dev```
+
+## Production environment on docker
+`docker` director contains dockers configurations.
+
+### How to run production env
+1. Go to project root path.
+1. Run ```docker-compose -f docker/nginx.yml up --build```
+
+
