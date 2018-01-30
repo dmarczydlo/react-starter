@@ -1,0 +1,12 @@
+# Full Developer Environment
+version: '2.2'
+
+services:
+ nginx-react-app:
+   build: ./nginx
+   container_name: nginx-react-app
+   ports:
+     - "8080:80"
+   volumes:
+   - ../:/var/www/react_app
+   tty: true
