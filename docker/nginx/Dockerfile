@@ -1,7 +1,6 @@
 FROM nginx:latest
 
-COPY nginx.conf /etc/nginx/nginx.conf
-
+COPY react.conf /etc/nginx/conf.d/react.conf
 RUN apt-get update && apt-get install -y \
         curl \
         wget \
@@ -37,5 +36,6 @@ CMD rm -rf ./node_modules \
     && npm install -g yarn \
     && yarn \
     && yarn build \
+    && service nginx restart \
     && bash
 

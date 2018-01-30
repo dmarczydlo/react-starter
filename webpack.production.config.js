@@ -27,7 +27,7 @@ module.exports = {
         './src/style/index.scss'
     ],
     output: {
-        publicPath: './',
+        publicPath: '/',
         path: path.join(__dirname, 'dist'),
         filename: '[chunkhash].js'
     },
