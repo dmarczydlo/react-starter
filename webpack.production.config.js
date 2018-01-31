@@ -23,6 +23,7 @@ loaders.push({
 
 module.exports = {
     entry: [
+        'babel-polyfill',
         './src/index.jsx',
         './src/style/index.scss'
     ],
