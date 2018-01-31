@@ -6,7 +6,7 @@ services:
    build: ./nginx
    container_name: nginx-react-app
    ports:
-     - "8080:80"
+     - "8080:9000"
    volumes:
    - ../:/var/www/react_app
    tty: true
