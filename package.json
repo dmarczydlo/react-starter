@@ -66,6 +66,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.0",
     "node-sass": "^4.6.0",
+    "offline-plugin": "^4.9.0",
     "postcss-loader": "^2.0.8",
     "precss": "^3.0.0",
     "react-hot-loader": "^3.1.3",
