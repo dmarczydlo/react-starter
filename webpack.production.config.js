@@ -1,10 +1,13 @@
-var webpack = require('webpack');
-var path = require('path');
-var loaders = require('./webpack.loaders');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var WebpackCleanupPlugin = require('webpack-cleanup-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CompressionPlugin = require('compression-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const loaders = require('./webpack.loaders');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const {resolve} = require('path')
 
 loaders.push({
         test: /\.scss$/,
@@ -82,6 +85,11 @@ module.exports = {
                 css: ['style.css'],
                 js: ['bundle.js']
             }
-        })
+        }),
+        new OfflinePlugin(),
+        new CopyWebpackPlugin([{
+            from: resolve(__dirname, 'public/pwa/'),
+            to: resolve(__dirname,'dist/')
+        }])
     ]
 };
