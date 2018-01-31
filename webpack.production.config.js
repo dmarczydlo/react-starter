@@ -6,6 +6,8 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const {resolve} = require('path')
 
 loaders.push({
         test: /\.scss$/,
@@ -84,6 +86,10 @@ module.exports = {
                 js: ['bundle.js']
             }
         }),
-        new OfflinePlugin()
+        new OfflinePlugin(),
+        new CopyWebpackPlugin([{
+            from: resolve(__dirname, 'public/pwa/'),
+            to: resolve(__dirname,'dist/')
+        }])
     ]
 };
