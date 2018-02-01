@@ -25,10 +25,12 @@
 1. ```yarn dev```
 
 ## Production environment on docker
-`docker` director contains dockers configurations.
+`docker` directory contains dockers configurations.
 
 ### How to run production env
-1. Go to project root path.
+1. Go to project root path (```react-starter```).
 1. Run ```docker-compose -f docker/nginx.yml up --build```
 
 
+### Progressive Web Apps
+PWA was implemented for production environment. The configuration is in the ```public/pwa``` directory. Please update ```manifest.json``` file to set own property.
