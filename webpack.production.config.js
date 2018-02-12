@@ -83,7 +83,7 @@ module.exports = {
             template: './public/index.html',
             files: {
                 css: ['style.css'],
-                js: ['bundle.js']
+                js: ['[chunkhash].js']
             }
         }),
         new OfflinePlugin(),
