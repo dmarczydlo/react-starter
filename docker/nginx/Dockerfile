@@ -26,10 +26,12 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | b
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
-EXPOSE 3000
+EXPOSE 9000
 
 # Default dir in bash\
 WORKDIR /var/www/react_app
+
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 CMD rm -rf ./node_modules \
     && source $NVM_DIR/nvm.sh \
