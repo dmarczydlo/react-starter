@@ -1,5 +1,6 @@
 
 # React Starter 
+React Starter it's alternative to create-react-app (boilerplate for React.js) without unnecessary dependencies. 
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/dmarczydlo/react-starter.svg)](https://greenkeeper.io/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dmarczydlo/react-starter/issues)  
