@@ -22,7 +22,7 @@
 ## Getting started
 1. ```git clone git@github.com:dmarczydlo/react-starter.git```
 1. ```yarn install```
-1. ```yarn dev```
+1. ```yarn start```
 
 ## Production environment on docker
 `docker` directory contains dockers configurations.
