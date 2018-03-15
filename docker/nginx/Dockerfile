@@ -29,15 +29,17 @@ ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 EXPOSE 9000
 
 # Default dir in bash\
+COPY . /var/www/react_app
 WORKDIR /var/www/react_app
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
-CMD rm -rf ./node_modules \
+CMD mkdir /var/www/react_app/dist; rm -rf ./node_modules \
     && source $NVM_DIR/nvm.sh \
     && npm install -g yarn \
     && yarn \
-    && yarn build \
+    && NODE_ENV=production yarn build \
     && service nginx restart \
     && bash
+
 
