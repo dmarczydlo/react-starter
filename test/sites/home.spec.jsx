@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../../src/sites/home';
 
 describe('home site', () => {
-    let wrapper;
+    let wrapper = null;
 
     it('should be rendered', () => {
         wrapper = global.shallow(<Home />);

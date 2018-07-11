@@ -3,7 +3,11 @@
 exports[`layout should be rendered 1`] = `
 <div>
   <header />
-  <React.Fragment />
+  <React.Fragment>
+    <div>
+      abcd
+    </div>
+  </React.Fragment>
   <footer />
 </div>
 `;

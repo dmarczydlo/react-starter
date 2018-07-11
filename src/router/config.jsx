@@ -4,23 +4,26 @@ import Home from '../sites/home';
 
 export const routes = [
     {
-        path: '/',
+        component: Home,
         exact: true,
-        component: Home
+        path: '/'
     },
     {
-        path: '/child/:id',
-        component: Home
+        component: Home,
+        path: '/child/:id'
     }
 ];
 
 export const RouteWithSubRoutes = (route, key) => (
     <Route
+        exact={route.exact}
         key={key}
         path={route.path}
-        exact={route.exact}
-        render={props => (
-            <route.component {...props} routes={route.routes} />
+        render={(props) => (
+            <route.component
+                {...props}
+                routes={route.routes}
+            />
         )}
     />
 );
