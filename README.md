@@ -23,9 +23,15 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 *  Webpack
 
 ## Getting started
+### To use repository
 1. ```git clone git@github.com:dmarczydlo/react-starter.git```
 1. ```yarn install```
 1. ```yarn start```
+
+### Using create script
+1. Run ```/scripts/create.sh```
+1. Enter project name
+1. Script will copy files (replace project name also) and install dependencies. Also git will be init
 
 ## Production environment on docker
 `docker` directory contains dockers configurations.
