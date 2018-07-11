@@ -9,6 +9,8 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 [![devDependencies Status](https://david-dm.org/dmarczydlo/react-starter/dev-status.svg)](https://david-dm.org/dmarczydlo/react-starter?type=dev)
 [![Build Status](https://travis-ci.org/dmarczydlo/react-starter.svg?branch=master)](https://travis-ci.org/dmarczydlo/react-starter)
 [![Coverage Status](https://coveralls.io/repos/github/dmarczydlo/react-starter/badge.svg?branch=master)](https://coveralls.io/github/dmarczydlo/react-starter?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/dmarczydlo/react-starter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dmarczydlo/react-starter?targetFile=package.json)
+
 # Starter dependencies  
 *  Axios
 *  React
@@ -21,9 +23,15 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 *  Webpack
 
 ## Getting started
+### To use repository
 1. ```git clone git@github.com:dmarczydlo/react-starter.git```
 1. ```yarn install```
 1. ```yarn start```
+
+### Using create script
+1. Run ```/scripts/create.sh```
+1. Enter project name
+1. Script will copy files (replace project name also) and install dependencies. Also git will be init
 
 ## Production environment on docker
 `docker` directory contains dockers configurations.
