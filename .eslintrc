@@ -4,7 +4,10 @@
     "browser": true,
     "jest": true
   },
-  "extends": "airbnb",
+  "extends": [
+    "eslint:all",
+    "plugin:react/all"
+  ],
   "plugins": [
     "import",
     "jsx-a11y",
@@ -22,49 +25,21 @@
         "SwitchCase": 1
       }
     ],
-    "max-len": [
-      0
-    ],
-    "no-param-reassign": [
-      0
-    ],
-    "react/forbid-prop-types": [
-      0
-    ],
-    "react/jsx-indent-props": [
-      2,
-      4
-    ],
-    "react/jsx-indent": [
-      0
-    ],
-    "react/prefer-stateless-function": [
-      0
-    ],
-    "react/prop-types": [
-      0
-    ],
-    "react/jsx-space-before-closing": [
-      0
-    ],
-    "react/no-multi-comp": [
-      0
-    ],
-    "no-mixed-operators": [
-      0
-    ],
-    "arrow-body-style": [
-      0
-    ],
-    "object-curly-spacing": [
-      "error",
-      "never"
-    ],
-    "react/no-array-index-key":[
-      0
-    ],
-    "jsx-a11y/anchor-is-valid": [
-      0
-    ]
+    "quotes": 0,
+    "sort-imports": 0,
+    "max-len": 0,
+    "quote-props": 0,
+    "no-process-env": 0,
+    "function-paren-newline": 0,
+    "no-undef": 0,
+    "padded-blocks": 0,
+    "react/require-optimization": 0,
+    "react/prefer-stateless-function": 0,
+    "arrow-body-style": 0,
+    "one-var": 0,
+    "space-before-function-paren": 0,
+    "no-extra-parens": 0,
+    "react/jsx-no-bind": 0,
+    "react/jsx-max-depth": 0
   }
 }

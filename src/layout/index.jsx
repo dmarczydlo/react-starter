@@ -1,17 +1,22 @@
-import React, {Component, Fragment} from 'react';
+import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
 import Header from './header';
 import Footer from './footer';
 
-export default class index extends Component {
-    render() {
-        return (
-            <div>
-                <Header />
-                <Fragment>
-                    {this.props.children}
-                </Fragment>
-                <Footer />
-            </div>
-        );
-    }
-}
+const Index = ({children}) => {
+    return (
+        <div>
+            <Header />
+            <Fragment>
+                {children}
+            </Fragment>
+            <Footer />
+        </div>
+    );
+};
+
+Index.propTypes = {
+    children: PropTypes.element.isRequired
+};
+
+export default Index;
