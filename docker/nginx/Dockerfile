@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 8.9.1
+ENV NODE_VERSION 10.6.0
 
 # NVM Manager
 RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash \
