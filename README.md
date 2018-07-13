@@ -9,7 +9,6 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 [![devDependencies Status](https://david-dm.org/dmarczydlo/react-starter/dev-status.svg)](https://david-dm.org/dmarczydlo/react-starter?type=dev)
 [![Build Status](https://travis-ci.org/dmarczydlo/react-starter.svg?branch=master)](https://travis-ci.org/dmarczydlo/react-starter)
 [![Coverage Status](https://coveralls.io/repos/github/dmarczydlo/react-starter/badge.svg?branch=master)](https://coveralls.io/github/dmarczydlo/react-starter?branch=master)
-[![Known Vulnerabilities](https://snyk.io/test/github/dmarczydlo/react-starter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dmarczydlo/react-starter?targetFile=package.json)
 
 # Starter dependencies  
 *  Axios
@@ -20,7 +19,7 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 *  Jest
 *  ESLint
 *  Babel
-*  Webpack
+*  Webpack (v4)
 
 ## Getting started
 ### To use repository
