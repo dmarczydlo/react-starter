@@ -33,3 +33,7 @@ fi
 if [ -x "$(command -v git)" ]; then
   git init
 fi
+
+if [ -d "scripts" ]; then
+  rm -rf scripts
+fi
