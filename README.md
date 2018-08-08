@@ -33,11 +33,12 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 1. Script will copy files (replace project name also) and install dependencies. Also git will be init
 
 ## Production environment on docker
-`docker` directory contains dockers configurations.
+`react.conf` contains `nginx` configurations.
 
 ### How to run production env
 1. Go to project root path (```react-starter```).
-1. Run ```docker-compose -f docker/nginx.yml up --build```
+1. Build docker ```docker build -t nginx . ```
+1. Run docker with port forwarding and volume ```docker -D run -p 8080:9000 -d -v $(pwd):/var/www/react_app --name nginx nginx```
 
 
 ### Progressive Web Apps

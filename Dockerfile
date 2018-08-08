@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-COPY react.conf /etc/nginx/conf.d/react.conf
+COPY ./react.conf /etc/nginx/conf.d/react.conf
 RUN apt-get update && apt-get install -y \
         curl \
         wget \
