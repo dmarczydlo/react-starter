@@ -1,12 +1,12 @@
 language: node_js
-git:
-    depth: 1
-
 node_js:
   - '10'
-cache: yarn
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
 install:
-  - yarn ci
+  - npm ci
 script:
   - $(npm bin)/cypress run --record
 after_script: "cat ./coverage/lcov.info | coveralls"
