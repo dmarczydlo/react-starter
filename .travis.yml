@@ -1,11 +1,15 @@
 language: node_js
-
-git:
-    depth: 1
-
 node_js:
   - '10'
-
-
-cache: yarn
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+before_install:
+  - yarn global add http-server
+install:
+  - npm ci
+script:
+  - yarn test
+  - yarn cypress:ci
 after_script: "cat ./coverage/lcov.info | coveralls"

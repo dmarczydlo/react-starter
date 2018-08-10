@@ -4,3 +4,5 @@ node_modules
 .eslintcache
 .idea/
 /coverage/
+yarn-error.log
+cypress/videos

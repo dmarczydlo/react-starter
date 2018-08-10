@@ -5,12 +5,14 @@ exports[`home site should be rendered 1`] = `
   className="test"
 >
   <Link
+    name="child1"
     replace={false}
     to="/child/1"
   >
     child 1
   </Link>
   <Link
+    name="child2"
     replace={false}
     to="/child/2"
   >
