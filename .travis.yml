@@ -8,6 +8,7 @@ cache:
 install:
   - npm ci
 script:
-  - test
+  - npm run test
+  - npm run start
   - $(npm bin)/cypress run --record
 after_script: "cat ./coverage/lcov.info | coveralls"
