@@ -20,6 +20,7 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 *  ESLint
 *  Babel
 *  Webpack (v4)
+*  Cypress (e2e)
 
 ## Getting started
 ### To use repository
@@ -43,3 +44,9 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 
 ### Progressive Web Apps
 PWA was implemented for production environment. The configuration is in the ```public/pwa``` directory. Please update ```manifest.json``` file to set own property.
+
+### End to End Tests
+Cypress has been implemented for e2e (without selenium). How to run e2e tests?
+* ```yarn cypress:run``` for developer environment (as CLI) 
+* ```yarn cypress:open``` for open cypress browser mode
+* ```yarn cypress:ci``` for CI
