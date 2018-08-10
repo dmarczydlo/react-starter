@@ -13,7 +13,9 @@
     "jest": "jest --coverage --verbose",
     "lint": "eslint src --ext .js --ext .jsx && eslint test --ext .js --ext .jsx",
     "lint:fix": "eslint src --ext .js --ext .jsx --fix  && eslint test --ext .js --ext .jsx --fix",
-    "cypress": "cypress run"
+    "cypress:run": "cypress run",
+    "cypress:ci": "yarn build  && run-p --race start:ci cypress:run",
+    "start:ci": "http-server ./dist -a localhost -p 3000 -c-1"
   },
   "author": "Daniel Marczydlo <daniel.marczydlo@gmail.com>",
   "license": "MIT",
