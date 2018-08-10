@@ -6,7 +6,7 @@ cache:
     - ~/.npm
     - ~/.cache
 before_install:
-  - yarn -g http-server
+  - yarn global add http-server
 install:
   - npm ci
 script:
