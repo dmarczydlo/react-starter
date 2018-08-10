@@ -9,5 +9,6 @@ install:
   - npm ci
 script:
   - npm test
+  - npm start -- --silent &
   - $(npm bin)/cypress run --record
 after_script: "cat ./coverage/lcov.info | coveralls"
