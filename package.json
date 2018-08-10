@@ -66,6 +66,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.5",
     "html-webpack-plugin": "^3.0.6",
+    "jsdom": "11.11.0",
     "node-sass": "^4.6.0",
     "postcss-loader": "^2.0.8",
     "precss": "^3.0.0",
