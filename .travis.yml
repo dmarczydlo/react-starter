@@ -5,6 +5,8 @@ cache:
   directories:
     - ~/.npm
     - ~/.cache
+before_install:
+  - yarn -g http-server
 install:
   - npm ci
 script:
