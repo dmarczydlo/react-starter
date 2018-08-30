@@ -7,8 +7,6 @@ cache:
     - ~/.cache
 before_install:
   - yarn global add http-server
-install:
-  - npm ci
 script:
   - yarn test
   - yarn cypress:ci
