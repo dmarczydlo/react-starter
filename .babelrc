@@ -1,40 +1,16 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": [
-            "last 2 versions",
-            "ie >= 10"
-          ]
-        }
-      }
-    ],
-    "react",
-    "stage-0"
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
-  "env": {
-    "development": {
-      "plugins": [[ "transform-runtime",
-        "transform-async-generator-functions",
-        "transform-function-bind",
-        "react-transform", {
-        "transforms": [{
-          "transform": "react-transform-hmr",
-          "imports": ["react"],
-          "locals": ["module"]
-        }]
-      }]]
-    }
-  },
   "plugins": [
     [
-      "typecheck",
+      "@babel/plugin-transform-runtime",
       {
-        "disable": {
-          "production": true
-        }
+        "corejs": false,
+        "helpers": true,
+        "regenerator": true,
+        "useESModules": false
       }
     ]
   ]

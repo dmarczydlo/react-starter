@@ -26,7 +26,7 @@ loaders.push({
 
 module.exports = {
     entry: [
-        'babel-polyfill',
+        '@babel/polyfill',
         './src/index.jsx',
         './src/style/index.scss'
     ],
@@ -36,7 +36,10 @@ module.exports = {
         filename: '[chunkhash].js'
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: [
+            '.js',
+            '.jsx'
+        ]
     },
     module: {
         rules: loaders
@@ -46,7 +49,9 @@ module.exports = {
         minimize: true
     },
     performance: {
-        hints: process.env.NODE_ENV === 'production' ? 'warning' : false
+        hints: process.env.NODE_ENV === 'production' ?
+            'warning' :
+            false
     },
     plugins: [
         new WebpackCleanupPlugin(),
@@ -82,9 +87,11 @@ module.exports = {
                 minify: false
             }
         }),
-        new CopyWebpackPlugin([{
-            from: resolve(__dirname, 'public/pwa/'),
-            to: resolve(__dirname, 'dist/')
-        }])
+        new CopyWebpackPlugin([
+            {
+                from: resolve(__dirname, 'public/pwa/'),
+                to: resolve(__dirname, 'dist/')
+            }
+        ])
     ]
 };
