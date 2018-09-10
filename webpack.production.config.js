@@ -69,8 +69,9 @@ module.exports = {
         }),
         new webpack.NoEmitOnErrorsPlugin(),
         new CompressionPlugin({
-            asset: '[path].gz[query]',
             algorithm: 'gzip',
+            compressionOptions: {level: 1},
+            filename: '[path].gz[query]',
             test: /\.js$|\.css$|\.html$/,
             threshold: 10240,
             minRatio: 0
