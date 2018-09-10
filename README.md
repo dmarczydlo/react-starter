@@ -18,7 +18,7 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 *  React Router (v4)
 *  Jest
 *  ESLint
-*  Babel
+*  Babel (v7)
 *  Webpack (v4)
 *  Cypress (e2e)
 
