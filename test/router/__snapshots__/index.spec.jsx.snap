@@ -14,7 +14,7 @@ exports[`Router index Config should be rendered 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "pathname": "blank",
+        "pathname": "/",
         "search": "",
         "state": undefined,
       },
@@ -45,7 +45,7 @@ exports[`Router index Config should be rendered without layout 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "pathname": "blank",
+        "pathname": "/",
         "search": "",
         "state": undefined,
       },
