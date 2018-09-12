@@ -1,4 +1,3 @@
-"use strict";
 const webpack = require('webpack');
 const path = require('path');
 const loaders = require('./webpack.loaders');
@@ -9,62 +8,58 @@ const HOST = process.env.HOST || "0.0.0.0";
 const PORT = process.env.PORT || "3000";
 
 loaders.push({
-    test: /\.scss$/,
+    exclude: ['node_modules'],
     loaders: [
         'style-loader',
         'css-loader?importLoaders=1',
         'sass-loader'
     ],
-    exclude: ['node_modules']
+    test: /\.scss$/
 });
 
 module.exports = {
+    devServer: {
+        contentBase: "./public",
+        historyApiFallback: true,
+        host: HOST,
+        hot: true,
+        inline: true,
+        noInfo: true,
+        port: PORT
+    },
+    devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
     entry: [
         'react-hot-loader/patch',
-        './src/index.jsx' // your app's entry point
+        './src/index.jsx'
     ],
-    devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
-    output: {
-        publicPath: '/',
-        path: path.join(__dirname, 'public'),
-        filename: 'bundle.js'
-    },
-    resolve: {
-        extensions: [
-            '.js',
-            '.jsx'
-        ]
-    },
     module: {
         rules: loaders
     },
-    devServer: {
-        contentBase: "./public",
-        // do not print bundle build stats
-        noInfo: true,
-        // enable HMR
-        hot: true,
-        // embed the webpack-dev-server runtime into the bundle
-        inline: true,
-        // serve index.html in place of 404 responses to allow HTML5 history
-        historyApiFallback: true,
-        port: PORT,
-        host: HOST
+    output: {
+        filename: 'bundle.js',
+        path: path.join(__dirname, 'public'),
+        publicPath: '/'
     },
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({
-            filename: 'style.css',
-            allChunks: true
+            allChunks: true,
+            filename: 'style.css'
         }),
         new HtmlWebpackPlugin({
-            template: './public/index.html',
             files: {
                 css: ['style.css'],
                 js: ["[chunkhash].js"]
-            }
+            },
+            template: './public/index.html'
         })
-    ]
+    ],
+    resolve: {
+        extensions: [
+            '.js',
+            '.jsx'
+        ]
+    }
 };

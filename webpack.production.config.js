@@ -10,78 +10,72 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const {resolve} = require('path');
 
 loaders.push({
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: 'css-loader?-minimize?sourceMap&localIdentName=[local]___[hash:base64:5]!sass-loader?outputStyle=compressed'
-        }),
-        exclude: ['node_modules']
-    },
-    {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-    }
+    exclude: ['node_modules'],
+    loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: 'css-loader?-minimize?sourceMap&localIdentName=[local]___[hash:base64:5]!sass-loader?outputStyle=compressed'
+    }),
+    test: /\.scss$/
+},
+{
+    exclude: /node_modules/,
+    loader: 'babel-loader',
+    test: /\.js$/
+}
 );
 
 module.exports = {
+    devtool: 'source-map',
     entry: [
         '@babel/polyfill',
         './src/index.jsx',
         './src/style/index.scss'
     ],
-    output: {
-        publicPath: '/',
-        path: path.join(__dirname, 'dist'),
-        filename: '[chunkhash].js'
-    },
-    resolve: {
-        extensions: [
-            '.js',
-            '.jsx'
-        ]
-    },
     module: {
         rules: loaders
     },
-    devtool: 'source-map',
     optimization: {
         minimize: true
     },
+    output: {
+        filename: '[chunkhash].js',
+        path: path.join(__dirname, 'dist'),
+        publicPath: '/'
+    },
     performance: {
-        hints: process.env.NODE_ENV === 'production' ?
-            'warning' :
-            false
+        hints: process.env.NODE_ENV === 'production'
+            ? 'warning'
+            : false
     },
     plugins: [
         new WebpackCleanupPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: JSON.stringify('production'),
-                BABEL_ENV: JSON.stringify('production')
+                BABEL_ENV: JSON.stringify('production'),
+                NODE_ENV: JSON.stringify('production')
             }
         }),
         new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new ExtractTextPlugin({
-            filename: 'style.[chunkhash].css',
-            allChunks: true
+            allChunks: true,
+            filename: 'style.[chunkhash].css'
         }),
         new webpack.NoEmitOnErrorsPlugin(),
         new CompressionPlugin({
             algorithm: 'gzip',
             compressionOptions: {level: 1},
             filename: '[path].gz[query]',
+            minRatio: 0,
             test: /\.js$|\.css$|\.html$/,
-            threshold: 10240,
-            minRatio: 0
+            threshold: 10240
         }),
         new HtmlWebpackPlugin({
-            template: './public/index.html',
             files: {
                 css: ['style.css'],
                 js: ['[chunkhash].js']
-            }
+            },
+            template: './public/index.html'
         }),
         new OfflinePlugin({
             ServiceWorker: {
@@ -94,5 +88,11 @@ module.exports = {
                 to: resolve(__dirname, 'dist/')
             }
         ])
-    ]
+    ],
+    resolve: {
+        extensions: [
+            '.js',
+            '.jsx'
+        ]
+    }
 };

@@ -15,8 +15,6 @@ const Index = ({children}) => {
     );
 };
 
-Index.propTypes = {
-    children: PropTypes.element.isRequired
-};
+Index.propTypes = {children: PropTypes.element.isRequired};
 
 export default Index;
