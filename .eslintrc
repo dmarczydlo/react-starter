@@ -25,6 +25,7 @@
         "SwitchCase": 1
       }
     ],
+    "object-curly-newline": ["error", { "multiline": true, "minProperties": 4 }],
     "quotes": 0,
     "sort-imports": 0,
     "max-len": 0,
