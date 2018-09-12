@@ -32,9 +32,7 @@ module.exports = {
         'react-hot-loader/patch',
         './src/index.jsx'
     ],
-    module: {
-        rules: loaders
-    },
+    module: {rules: loaders},
     output: {
         filename: 'bundle.js',
         path: path.join(__dirname, 'public'),
