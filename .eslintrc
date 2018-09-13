@@ -27,6 +27,7 @@
     ],
     "object-curly-newline": ["error", { "multiline": true, "minProperties": 4 }],
     "quotes": 0,
+    "require-unicode-regexp": 0,
     "sort-imports": 0,
     "max-len": 0,
     "quote-props": 0,

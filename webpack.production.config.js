@@ -31,12 +31,8 @@ module.exports = {
         './src/index.jsx',
         './src/style/index.scss'
     ],
-    module: {
-        rules: loaders
-    },
-    optimization: {
-        minimize: true
-    },
+    module: {rules: loaders},
+    optimization: {minimize: true},
     output: {
         filename: '[chunkhash].js',
         path: path.join(__dirname, 'dist'),
@@ -77,11 +73,7 @@ module.exports = {
             },
             template: './public/index.html'
         }),
-        new OfflinePlugin({
-            ServiceWorker: {
-                minify: false
-            }
-        }),
+        new OfflinePlugin({ServiceWorker: {minify: false}}),
         new CopyWebpackPlugin([
             {
                 from: resolve(__dirname, 'public/pwa/'),
