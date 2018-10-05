@@ -10,7 +10,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const {resolve} = require('path');
 
 loaders.push({
-    exclude: ['node_modules'],
+    exclude: [/node_modules/],
     loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: 'css-loader?-minimize?sourceMap&localIdentName=[local]___[hash:base64:5]!sass-loader?outputStyle=compressed'
@@ -18,7 +18,7 @@ loaders.push({
     test: /\.scss$/
 },
 {
-    exclude: /node_modules/,
+    exclude: [/node_modules/],
     loader: 'babel-loader',
     test: /\.js$/
 }
