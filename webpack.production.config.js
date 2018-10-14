@@ -82,7 +82,7 @@ module.exports = {
         new WorkboxPlugin.GenerateSW({
             clientsClaim: true,
             skipWaiting: true,
-            swDest: 'sw.js',
+            swDest: 'sw.js'
         })
     ],
     resolve: {
