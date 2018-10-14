@@ -5,8 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const {resolve} = require('path');
 
 loaders.push({
@@ -73,13 +73,17 @@ module.exports = {
             },
             template: './public/index.html'
         }),
-        new OfflinePlugin({ServiceWorker: {minify: false}}),
         new CopyWebpackPlugin([
             {
                 from: resolve(__dirname, 'public/pwa/'),
                 to: resolve(__dirname, 'dist/')
             }
-        ])
+        ]),
+        new WorkboxPlugin.GenerateSW({
+            swDest: 'sw.js',
+            clientsClaim: true,
+            skipWaiting: true,
+        })
     ],
     resolve: {
         extensions: [

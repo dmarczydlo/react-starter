@@ -2,7 +2,7 @@ import {applyMiddleware, createStore} from 'redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk';
-import {install} from 'offline-plugin/runtime';
+import worker from './worker';
 import {Provider} from 'react-redux';
 import reducers from './reducers';
 import App from './sites/app';
@@ -16,5 +16,5 @@ ReactDOM.render(
 );
 
 if (process.env.NODE_ENV === 'production') {
-    install();
+    worker();
 }
