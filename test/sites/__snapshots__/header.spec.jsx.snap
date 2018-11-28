@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should be rendered 1`] = `
-<div>
-  header
-</div>
+<Fragment>
+  <div>
+    Header
+  </div>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <meta
+      charSet="utf-8"
+    />
+    <title>
+      React starter
+    </title>
+  </HelmetWrapper>
+</Fragment>
 `;

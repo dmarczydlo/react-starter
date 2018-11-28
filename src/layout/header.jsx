@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 
 const header = () => {
     return (
-        <div>
-            {'header'}
-        </div>
+        <Fragment>
+            <div>
+                {'Header'}
+            </div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>
+                    {'React starter'}
+                </title>
+            </Helmet>
+        </Fragment>
     );
 };
 
