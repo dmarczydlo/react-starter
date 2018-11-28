@@ -23,6 +23,7 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 *  Webpack (v4)
 *  Cypress (e2e)
 *  Workbox (PWA)
+*  Helmet
 
 ## Getting started
 ### To use repository
