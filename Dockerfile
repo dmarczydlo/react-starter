@@ -35,6 +35,7 @@ WORKDIR /var/www/react_app
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 CMD mkdir /var/www/react_app/dist; rm -rf ./node_modules \
+    && rm yarn.lock || true \
     && source $NVM_DIR/nvm.sh \
     && npm install -g yarn \
     && yarn \
