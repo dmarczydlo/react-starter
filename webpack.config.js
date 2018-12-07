@@ -11,7 +11,7 @@ loaders.push({
     exclude: [/node_modules/],
     loaders: [
         'style-loader',
-        'css-loader?importLoaders=1',
+        'css-loader',
         'sass-loader'
     ],
     test: /\.scss$/
