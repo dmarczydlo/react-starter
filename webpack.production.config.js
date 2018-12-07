@@ -13,7 +13,7 @@ loaders.push({
     exclude: [/node_modules/],
     loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: 'css-loader?-minimize?sourceMap&localIdentName=[local]___[hash:base64:5]!sass-loader?outputStyle=compressed'
+        use: 'css-loader?!sass-loader?outputStyle=compressed'
     }),
     test: /\.scss$/
 },
