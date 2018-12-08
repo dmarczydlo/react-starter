@@ -38,6 +38,13 @@ describe('Router index', () => {
                 {routeWithSubRoutes(route)}
             </Router>
         );
+        expect(routeWithSubRoutes(route).props.path).toEqual('/test/');
         expect(wrapper).toMatchSnapshot();
+
+        wrapper = global.mount(
+            <Router>
+                {routeWithSubRoutes(route)}
+            </Router>
+        );
     });
 });
