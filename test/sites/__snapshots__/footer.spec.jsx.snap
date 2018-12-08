@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer should be rendered 1`] = `
-<div>
-  footer
+<div
+  className="footer"
+>
+  (c) React starter footer
 </div>
 `;

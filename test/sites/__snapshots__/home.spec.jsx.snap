@@ -1,22 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`home site should be rendered 1`] = `
-<div
-  className="test"
->
-  <Link
-    name="child1"
-    replace={false}
-    to="/child/1"
-  >
-    child 1
-  </Link>
-  <Link
-    name="child2"
-    replace={false}
-    to="/child/2"
-  >
-    child 2
-  </Link>
-</div>
+exports[`home site home container should be rendered 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

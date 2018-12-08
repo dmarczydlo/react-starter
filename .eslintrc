@@ -13,6 +13,14 @@
     "jsx-a11y",
     "react"
   ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "15.0",
+      "flowVersion": "0.53"
+    }
+  },
   "rules": {
     "comma-dangle": [
       "error",
@@ -25,7 +33,13 @@
         "SwitchCase": 1
       }
     ],
-    "object-curly-newline": ["error", { "multiline": true, "minProperties": 4 }],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true,
+        "minProperties": 4
+      }
+    ],
     "quotes": 0,
     "require-unicode-regexp": 0,
     "sort-imports": 0,
@@ -55,6 +69,7 @@
     "arrow-parens": 0,
     "no-warning-comments": 0,
     "max-lines-per-function": 0,
-    "max-statements": 0
+    "max-statements": 0,
+    "react/no-unused-state": 0
   }
 }
