@@ -1,10 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`layout should be rendered 1`] = `
-<div>
+<div
+  className="wrapper"
+>
   <header />
-  <div>
-    abcd
+  <div
+    className="content"
+  >
+    <div>
+      abcd
+    </div>
   </div>
   <footer />
 </div>

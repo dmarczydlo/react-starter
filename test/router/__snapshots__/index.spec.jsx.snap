@@ -73,8 +73,8 @@ exports[`Router index should be rendered 1`] = `
       />
       <RouteWithSubRoutes
         component={[Function]}
-        key="/child/:id"
-        path="/child/:id"
+        key="/form"
+        path="/form"
       />
       <Route
         component={[Function]}

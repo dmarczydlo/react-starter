@@ -1,0 +1,14 @@
+.header {
+    background-color: $header-background;
+    color: $font-color-light;
+    padding: 20px;
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(50px, 1fr));
+        grid-gap: 10px;
+        a {
+            text-decoration: none;
+            color: $font-color-light;
+        }
+    }
+}

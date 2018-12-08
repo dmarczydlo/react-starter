@@ -1,7 +1,33 @@
+@import 'variables.scss';
+@import 'header.scss';
+html,
 body {
-  font-family: Helvetica, Arial, sans-serif;
-}
-.test {
-  background-color: yellow;
+    height: 100%;
 }
 
+body {
+    margin: 0;
+    color: $font-color;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "content" "footer";
+    grid-template-rows: auto 1fr auto;
+}
+
+.content {
+    padding: 20px;
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: $footer-background;
+    color: $font-color-light;
+    padding: 10px;
+    text-align: center;
+}

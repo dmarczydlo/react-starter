@@ -1,6 +1,8 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import Home from '../sites/home';
+import Home from '../sites/Home';
+import Form from '../sites/Form';
+
 
 export const routes = [
     {
@@ -9,8 +11,8 @@ export const routes = [
         path: '/'
     },
     {
-        component: Home,
-        path: '/child/:id'
+        component: Form,
+        path: '/form'
     }
 ];
 

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form site form  should be rendered 1`] = `
+<fieldset>
+  <h2>
+    Form
+  </h2>
+  <label
+    htmlFor="name"
+  >
+    Name
+  </label>
+  <input
+    name="name"
+    onChange={[Function]}
+    type="text"
+  />
+  <button
+    id="button"
+    onClick={[Function]}
+    type="button"
+  >
+    Send to API
+  </button>
+  <p>
+    {}
+  </p>
+</fieldset>
+`;
+
+exports[`Form site form container should be rendered 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;

@@ -1,21 +1,21 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './header';
 import Footer from './footer';
 import '../style/index.scss';
 
-const Index = ({children}) => {
+const Index = ({ children }) => {
     return (
-        <div>
+        <div className="wrapper">
             <Header />
-            <Fragment>
+            <div className="content">
                 {children}
-            </Fragment>
+            </div>
             <Footer />
         </div>
     );
 };
 
-Index.propTypes = {children: PropTypes.element.isRequired};
+Index.propTypes = { children: PropTypes.element.isRequired };
 
 export default Index;

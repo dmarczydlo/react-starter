@@ -2,8 +2,37 @@
 
 exports[`Header should be rendered 1`] = `
 <Fragment>
-  <div>
-    Header
+  <div
+    className="header"
+  >
+    <div
+      className="navbar"
+    >
+      <div>
+        <Link
+          replace={false}
+          to="/"
+        >
+          Counter
+        </Link>
+      </div>
+      <div>
+        <Link
+          replace={false}
+          to="/form"
+        >
+          Form
+        </Link>
+      </div>
+      <div>
+        <Link
+          replace={false}
+          to="/abcd"
+        >
+          Error
+        </Link>
+      </div>
+    </div>
   </div>
   <HelmetWrapper
     defer={true}
