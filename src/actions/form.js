@@ -5,12 +5,13 @@ const SEND_DATA_ERROR = 'SEND_DATA_ERROR';
 
 const API_CALL = 'https://jsonplaceholder.typicode.com/posts';
 
-const sendDataAPI = (name, url = API_CALL) => {
+const sendDataAPI = (nameValue, url = API_CALL) => {
     return (dispatch) => {
         dispatch({ type: SEND_DATA_START });
-        return axios.post(url, { name }).then(result => {
+        return axios.post(url, { name: nameValue }).then(result => {
+            const { name } = result.data;
             dispatch({
-                data: result.data,
+                data: {name},
                 type: SEND_DATA_SUCCESS
             });
         }).

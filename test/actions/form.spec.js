@@ -24,10 +24,7 @@ describe('async form actions', () => {
         const expectedActions = [
             { type: SEND_DATA_START },
             {
-                data: {
-                    id: 101,
-                    name
-                },
+                data: {name},
                 type: SEND_DATA_SUCCESS
             }
         ];
