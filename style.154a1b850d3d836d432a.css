@@ -1,0 +1,3 @@
+.header{background-color:#444;color:#fff;padding:20px}.header .navbar{display:grid;grid-template-columns:repeat(auto-fit, minmax(50px, 1fr));grid-gap:10px}.header .navbar a{text-decoration:none;color:#fff}html,body{height:100%}body{margin:0;color:#000}.wrapper{display:grid;grid-gap:10px;height:100%;grid-template-columns:1fr;grid-template-areas:"header" "content" "footer";grid-template-rows:auto 1fr auto}.content{padding:20px;grid-area:content}.footer{grid-area:footer;background-color:#444;color:#fff;padding:10px;text-align:center}
+
+/*# sourceMappingURL=style.154a1b850d3d836d432a.css.map*/
