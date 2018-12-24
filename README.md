@@ -34,7 +34,17 @@ React Starter it's alternative to create-react-app (boilerplate for React.js) wi
 ### Using create script
 1. Run ```/scripts/create.sh```
 1. Enter project name
-1. Script will copy files (replace project name also) and install dependencies. Also git will be init
+1. Script will copy files (replace project name also) and install dependencies. Also git will be inited
+
+Script show you options to select like below:
+```sh
+Please select option for start:
+1) Empty project
+2) Full project (with tests and examples component
+3) Quit
+```
+* If you select 1) option then your project will be created without tests
+* If you select 2) option then your project will be created with all tests and dependencies for their.
 
 ## Production environment on docker
 `react.conf` contains `nginx` configurations.
