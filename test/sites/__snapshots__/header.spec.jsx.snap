@@ -10,6 +10,7 @@ exports[`Header should be rendered 1`] = `
     >
       <div>
         <Link
+          name="home"
           replace={false}
           to="/"
         >
@@ -18,6 +19,7 @@ exports[`Header should be rendered 1`] = `
       </div>
       <div>
         <Link
+          name="form"
           replace={false}
           to="/form"
         >
