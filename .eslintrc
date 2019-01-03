@@ -40,6 +40,7 @@
         "minProperties": 4
       }
     ],
+    "react/jsx-fragments": 0,
     "quotes": 0,
     "require-unicode-regexp": 0,
     "sort-imports": 0,
