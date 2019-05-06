@@ -16,7 +16,9 @@
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
     "cypress:ci": "yarn build  && run-p --race start:ci cypress:run",
-    "start:ci": "http-server ./dist -a localhost -p 3000 --cors -c-1"
+    "start:ci": "http-server ./dist -a localhost -p 3000 --cors -c-1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Daniel Marczydlo <daniel.marczydlo@gmail.com>",
   "license": "MIT",
@@ -32,7 +34,8 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -108,5 +111,6 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
-  }
+  },
+  "snyk": true
 }
