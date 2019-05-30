@@ -21,7 +21,7 @@
   "author": "Daniel Marczydlo <daniel.marczydlo@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "jest": "^24.0.0",
     "prop-types": "^15.6.2",
     "raf": "^3.4.0",
